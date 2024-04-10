@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página landing de vacantes de Magneto">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Inconsolata Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Own CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Magneto Landing Generator</title>
+</head>
+<body>
+
+    <header class="header-guide bg-[#11101E] px-48 py-10 flex items-center justify-between gap-x-6">
+        <h1 class="text-4xl text-white">Construye fácilmente tu propia página</h1>
+        <h3 class="text-xl text-[#CBCBCB]">Te guiaremos a través del proceso, mostrándote resultados previos para que hagas la página de tus vacantes tal como te la imaginas</h3>
+        <img src="{% static 'assets/logo.png' %}" alt="Logo Landing Generator" class="w-44">
+    </header>
+
+    <main>
+
+        <aside class="container-guide">
+            <h2>Ahora personaliza tu Hero</h2>
+            <p>
+                El Hero es la parte más llamativa de tu página, lo que primero visualiza el usuario y lo que debe captar su atención para mirar más acerca de tu empresa y vacantes.
+                <br>
+                Reemplaza el texto de la sección de más abajo y agrega una imagen. Así como lo veas quedará tu Hero finalmente, ya aplicamos los colores ;)
+            </p>
+        </aside>
+
+        <section class="flex">
+            <div class="bg-[#70ECD4] py-20 w-2/3 flex flex-col items-center">
+                <textarea class="bg-transparent border border-black text-5xl font-bold text-[#090467] max-w-lg mb-10">-Escribe aquí el título de tu Hero-</textarea>
+                <textarea rows="3" class="bg-transparent border border-black text-xl font-bold text-[#090467] min-w-96 max-w-lg">-Escribe aquí información adicional sobre tus vacantes o una invitación a inscribirse-</textarea>
+            </div>
+            <img src="{% static 'assets/default.png' %}" alt="Imagen Hero" class="w-1/3 object-cover">
+        </section>
+
+        <aside class="container-guide">
+            <h2>Habla un poco sobre tu empresa</h2>
+            <p>
+                Acá puedes agregar información para interesar a los usuarios de ingresar a tu empresa. Algunas secciones comunes son: “¿Quiénes somos?”, “¿Por qué trabajar con nosotros?”, “Nuestro aporte a la sociedad”, “Trayectoria e impacto de la empresa”.
+                <br>
+                Acompáñala de alguna imagen para que sea aún más vistoso.
+            </p>
+        </aside>
+        <section class="flex px-20 mb-20">
+            <div class="mr-20">
+                <img src="{% static 'assets/default.png' %}" alt="Image 1" class="object-cover max-w-lg">
+            </div>
+            <div class="my-auto">
+                <textarea class="bg-transparent border border-black text-2xl font-bold text-[#090567] mb-8">-Título Sección 1-</textarea>
+                <textarea rows="10" class="bg-transparent border border-black w-full">-Ingresa un par de párrafos que hablen acerca de lo que escogiste de título-</textarea>
+            </div>
+        </section>
+
+        <section class="flex px-20">
+            <div class="mr-20 my-auto text-right">
+                <textarea class="bg-transparent border border-black text-2xl font-bold text-[#090567] mb-8">-Título Sección 2-</textarea>
+                <textarea rows="10" class="bg-transparent border border-black w-full">-Ingresa un par de párrafos que hablen acerca de lo que escogiste de título-</textarea>
+            </div>
+            <div>
+                <img src="{% static 'assets/default.png' %}" alt="Image 2" class="object-cover max-w-lg">
+            </div>
+        </section>
+
+        <aside class="container-guide">
+            <h2>Finalmente, agrega tus redes</h2>
+            <p>
+                Conecta tus demás redes sociales a Magneto. Y no te preocupes si no tienes alguna de las que están acá abajo, si lo dejas vacío, no aparecerá en tu página
+            </p>
+            <div class="flex flex-col mt-4">
+                <input type="text" placeholder="Link a Facebook" class="border border-black rounded-md my-2 px-2 py-1 w-64">
+                <input type="text" placeholder="Link a LinkedIn" class="border border-black rounded-md my-2 px-2 py-1 w-64">
+                <input type="text" placeholder="Link a Twitter/X" class="border border-black rounded-md my-2 px-2 py-1 w-64">
+                <input type="text" placeholder="Link a YouTube" class="border border-black rounded-md my-2 px-2 py-1 w-64">
+                <input type="text" placeholder="Link a sitio web" class="border border-black rounded-md my-2 px-2 py-1 w-64">
+            </div>
+        </aside>
+
+        <aside class="container-guide">
+            <h2>¡Y... listo!</h2>
+            <p>
+                Al hacer clic en el botón de abajo te llevaremos a la página que acabas de crear, con tu propio link y ya disponible para que todos puedan verla. Adicionalmente, agregaremos automáticamente más información y links a tus vacantes activas en Magneto. Recuerda que siempre puedes regresar y editar tu página en este mismo menú            </p>
+        </aside>
+
+        <div class="flex items-center mb-16">
+            <button class="btn-generate mx-auto">Generar tu sitio web</button>
+        </div>
+
+    </main>
+
+</body>
+</html>

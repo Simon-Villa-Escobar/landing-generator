@@ -22,4 +22,5 @@ from page import views as pageViews
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", pageViews.home),
+    path("create/", pageViews.create),
 ]
